@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style> 
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+    .box {
+        display: inline-block;
+    }
+   
+    </style>
+
+
+</head>
+<body class = "body">
+    <div class = "flex">
+        <h1>Counter</h1>
+    </div>
+    <div class = "flex">
+        <p>{{session["count"]}}times.</p>
+    </div>
+    <div class = "flex">
+        <div class = "box">
+            <a href= "{{url_for('counter')}}"   class ="btn btn-success">Click</a>
+            <a href="{{url_for('destroy')}}" class="btn btn-danger">Reset</a>
+        </div>
+    </div>   
+    
+    
+</body>
+</html>
